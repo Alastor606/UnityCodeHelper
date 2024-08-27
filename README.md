@@ -96,7 +96,7 @@ Save system can save the default type and custom serializeble classes.
 Also system have an extentions
 
 ```cs
-pulic void TestSave()
+public void TestSave()
 {
     int value = 100;
     value.Save("intValue");
