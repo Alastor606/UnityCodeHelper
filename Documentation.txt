@@ -1,0 +1,20 @@
+Rigidbody Extentions (uses from Rigidbody.'name'):
+Jump - simulates the jump with given force
+MoveTo - accepts the point or Vector3 for move an rigidbody there
+Move + x or y or z - Moves the rigidbody one component at a time
+Freeze/Unfreeze rotation - Freezing or Unfreezing rotation by one component at a time
+TransferControl3D - Accepts the Player Inputs and moving and rotating rigidbody using them
+
+Array Extentions (uses from type.'name'):
+First - return first object of collection
+Last - return last object of collection
+IsEmpty - returns false if array length > 0 && item[0] is not null
+GetEqualsCount - returns the count of equal obects to given
+GetEqualOrFirst - returns the equal given object or first
+AllDo - Forces all objects in the collection to perform actions
+AllDoWithout - Forces all objects, without exteptions, in the collection to perform actions
+SingleDo - Forces one object of collection to perform action
+Replace - Return array, where old value replaced to new
+Swap - Return array, where old and new values swapped
+Contains - Return true if collection contains the given object
+Equals - Accept array and if all values in given has equal in current returns true
