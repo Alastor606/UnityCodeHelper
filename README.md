@@ -1,6 +1,12 @@
 # Extentions methods for comfort Unity programming
 ## Here I have collected a large number of convenient and useful methods for faster use within Unity. Below will be described, in my opinion, the most interesting and requiring explanations.
-### New function - ***Creatnig code assets***
+## ***Get started***
+### To download just click the last release and take file ***Helper.unitypackage***
+### Download it and drag and drop to unity window
+### Success! Now you can use the UnityCodeHelper
+
+# Functions
+## New function - ***Creatnig code assets***
 There is two windows :
 
 - #### The script creation window where you need to enter the code and file name for the asset
@@ -57,7 +63,7 @@ void MyFoo(GameObject someObj)
 ```cs
 void Update()
 {
-    _rigidobdy.TransferControl2D(_speed, _jumpForce, KeyCode.Space); // Must be called only in Update
+    _rigidobdy.AutoControl2D(_speed, _jumpForce, KeyCode.Space, MovingType2D.Platformer); // Must be called only in Update
 }
 ```
 
@@ -84,3 +90,24 @@ public void MyFoo()
     array.GetAll<int>().First().value.Print(); //Console output 123
 }
 ```
+
+### Save system
+Save system can save the default type and custom serializeble classes.
+Also system have an extentions
+
+```cs
+pulic void TestSave()
+{
+    int value = 100;
+    value.Save("intValue");
+    var savedValue = value.Load("intValue");
+}
+
+public void SaveCollection()
+{
+    int[] saveArray = new int[] {10,20,30};
+    saveArray.Save("saveArray");
+    var array = HelperPrefs.GetCollection("saveArray", SaveTypes.Int);
+}
+```
+
